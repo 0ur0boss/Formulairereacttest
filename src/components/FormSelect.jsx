@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./formSelect.css";
 
 // Toute les valeurs qu'on retrouve dans le select
@@ -27,6 +28,13 @@ const values = [
       label: "autre",
     },
   ];
+
+  function getSelect(selectObject) {
+    // var value = selectObject.value;  
+    console.log(selectObject);
+  }
+
+
   
 const FormSelect = (props) => {
 
@@ -34,14 +42,14 @@ const FormSelect = (props) => {
   return (
     <div className="FormSelect">
       <label>Services</label>
-      <select>
-      <option value="">---</option>
-          {/* Pour chaque valeurs dans values on crée une option dans le select */}
+      <select id="select" value="YES" onChange={getSelect("value")} >
+        <option value="">---</option>
+        {/* Pour chaque valeurs dans values on crée une option dans le select */}
         {values.map((value) => (
-          <option key={value.id} value={value.label}>{value.label}
-          </option>
+        <option key={value.id} value={value.label}>{value.label}
+        </option>
         ))}
-    </select>
+      </select>
     </div>
   );
 };
