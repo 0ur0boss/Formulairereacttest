@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "label": "dev"
+    },
+    {
+      "id": 2,
+      "label": "marketing"
+    },
+    {
+      "id": 3,
+      "label": "commerce"
+    },
+    {
+      "id": 4,
+      "label": "produit"
+    },
+    {
+      "id": 5,
+      "label": "finance"
+    },
+    {
+      "id": 6,
+      "label": "autre"
+    }
+  ]

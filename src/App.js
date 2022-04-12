@@ -1,58 +1,12 @@
 import "./app.css";
 import FormInput from "./components/FormInput";
 // import FormSelect from "./components/FormSelect";
+import dataInput from "./data/Input.json"
+import dataOption from "./data/optionSelect.json"
+
 
 const App = () => {
 
-  // On peu rajouter autant de input que l'on souhaite ici
-  const inputs = [
-    {
-      id: 1,
-      name: "email",
-      type: "email",
-      placeholder: "Email",
-      errorMessage: "It should be a valid email address!",
-      label: "Email",
-      required: true,
-    }, 
-    {
-      id: 2,
-      name: "username",
-      type: "text",
-      placeholder: "Username",
-      errorMessage: "Username should be 3-16 characters and shouldn't include any special character!",
-      label: "Username",
-      pattern: "^[A-Za-z0-9]{3,16}$",
-      required: true,
-    }, 
-  ];
-
-  const values = [
-    {
-      id: 1,
-      label: "dev"
-    },
-    {
-      id: 2,
-      label: "marketing",
-    },
-    {
-      id: 3,
-      label: "commerce",
-    },
-    {
-      id: 4,
-      label: "produit",
-    },
-    {
-      id: 5,
-      label: "finance",
-    },
-    {
-      id: 6,
-      label: "autre",
-    },
-  ];
 
 
 
@@ -74,7 +28,7 @@ const App = () => {
         <h1>Register</h1>
 
         {/* On genere un input par input ecrit dans l objet inputs */}
-        {inputs.map((input) => (
+        {dataInput.map((input) => (
           <FormInput
             key={input.id}
             {...input}
@@ -86,7 +40,7 @@ const App = () => {
           <select id="select">
             <option value="">---</option>
             {/* Pour chaque valeurs dans values on crée une option dans le select */}
-            {values.map((value) => (
+            {dataOption.map((value) => (
             <option key={value.id} value={value.label}>{value.label}
             </option>
             ))}
